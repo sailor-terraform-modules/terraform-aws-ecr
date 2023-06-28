@@ -1,5 +1,4 @@
 output "id" {
-  description = "value"
-  value       = aws_ecr_repository.container_repository.id
-
+  value       = aws_ecr_repository.ecr.id
+  description = "The registry ID where the repository was created."
 }

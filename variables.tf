@@ -1,34 +1,23 @@
 variable "name" {
-  description = "value"
+  description = "Name of the repository"
   type        = string
-
 }
-variable "force_delete" {
-  description = "value"
-  type        = string
-  default     = false
-
-}
-
 variable "image_tag_mutability" {
-  description = "value"
+  description = "The tag mutability setting for the repository"
   type        = string
-
-}
-variable "image_scanning_configuration" {
-  description = "value"
-  type        = string
-  default     = true
-
 }
 variable "scan_on_push" {
-  description = "value"
+  description = "Indicates whether images are scanned after being pushed to the repository (true) or not scanned (false)"
   type        = bool
-  default     = true
-
 }
-variable "region" {
-  description = "value"
+variable "encryption_type" {
+  description = "The encryption type to use for the repository. Valid values are AES256 or KMS. Defaults to AES256"
   type        = string
-
+  default     = "AES256"
 }
+
+# variable "kms_key" {
+#   description = "The ARN of the KMS key to use when encryption_type is KMS. If not specified, uses the default AWS managed key for ECR"
+#   type        = string
+#   default     = ""
+# }
