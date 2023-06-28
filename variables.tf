@@ -22,6 +22,6 @@ variable "encryption_type" {
 #   default     = ""
 # }
 variable "region" {
-    type = string
-    description = "Region"
+  type        = string
+  description = "Region"
 }
